@@ -145,6 +145,19 @@
 
 
 .popup__form {
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(51, 51, 51, 0.9) url("../img/loading.gif") center / 50px no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease 0s;
+    }
 }
 .popup__subtitle {
     display: block;
@@ -166,8 +179,16 @@
     border-radius: 5px;
     border: 1px solid #a0a0a0;
     margin-bottom: 15px;
-
+    transition: all 0.5s ease 0s;
+    &:focus {
+        box-shadow: 0 0 15px #b7c9ad;
+    }
 }
+.popup__input._error {
+	box-shadow: 0 0 15px red;
+}
+
+
 .input {
     height: 17px;
     width: 350px;
