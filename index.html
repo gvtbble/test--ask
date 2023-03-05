@@ -11,12 +11,12 @@
 </head>
 <body>
 	<div class="wrapper">
-		<a href="#popup" class="btn">Кликни</a>
+		<a href="#popup" class="btn popup-link">Кликни</a>
 	</div>
 	<div id="popup" class="popup">
 		<div class="popup__body">
 			<div class="popup__content">
-				<a href="#" class="popup__close">
+				<a href="#" class="popup__close close-popup lock-padding">
 					<img src="img/icon/х.svg" alt="">
 				</a>
 				<div class="popup__container">
@@ -43,23 +43,17 @@
 							</div>
 						</div>
 						<div class="popup__column">
-							<form action="" class="popup__form">
-								<div class="popup__subtitle">
-									Введите Email для получения файлов:
-								</div>
-								<div class="popup__input">
-									<input autocomplete="off" type="text" name="form[]" data-value="email"
-										class="input req email">
-								</div>
-								<div class="popup__subtitle">
-									Введите телефон для подтверждения доступа:
-								</div>
-								<div class="popup__input">
-									<input autocomplete="off" type="number" name="form[]" data-value="+7 (000) 000-00-00"
-										class="input req email">
-								</div>
+							<form name="feedback" method="post" action="form.php" class="popup__form">
+								<label class="popup__subtitle">
+									Введите Email для получения файлов: <input autocomplete="on" type="email" name="email" id="email" placeholder="E-mail"
+									class="popup__input input">
+								</label>
+								<label class="popup__subtitle">
+									Введите телефон для подтверждения доступа: <input autocomplete="on" type="text" name="phone" id="phone" placeholder="+7 (000) 000-00-00" required
+									class="popup__input input">
+								</label>
 								<div class="popup__button pb">
-									<button type="submit" class="popup__btn">
+									<button type="submit" name="send" value="Отправить" class="popup__btn">
 										Скачать файлы <img src="img/icon/btn.svg" alt="">
 									</button>
 								</div>
@@ -77,5 +71,6 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/script.js"></script>
 </body>
 </html>
