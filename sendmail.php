@@ -13,7 +13,7 @@
 	//От кого письмо
 	$mail->setFrom('gvtbble@gmail.com', 'Максим Пчелинцев');
 	//Кому отправить
-	$mail->addAddress('x-y-z-w@mail.ru');
+	$mail->addAddress('order@salesgenerator.pro');
 	//Тема письма
 	$mail->Subject = '“заявка” Пчелинцев';
 
