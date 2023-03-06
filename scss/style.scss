@@ -72,6 +72,7 @@
         
     }
     &__title{
+        width: 100%;
         color: #000000;
         font-size: 35px;
         font-weight: 700;
@@ -96,7 +97,6 @@
         &:last-child{
             margin-right: -27px;
         }
-        
     }
     &__images{
         padding-top: 23px;
@@ -117,6 +117,66 @@
     .third {
         position: relative;
         bottom: 330px;
+    }
+    @media(max-width:875px) {
+        .format {
+            display: none;
+        }
+        .first {
+            display: flex;
+            height: 120px;
+            left: 140px;
+            top: 0;
+        }
+        .second {
+            display: flex;
+            height: 88px;
+            left: 62px;
+            bottom: -35px;
+        }
+        .third {
+            display: flex;
+            height: 161px;
+            position: relative;
+            bottom: 0;
+            right: 102px;
+        }
+        &__row{
+            flex-direction: column;
+        }
+        &__container {
+            padding: 14px 19px 30px 19px;
+        }
+        &__title {
+            color: #000000;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        &__images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 !important;
+        }
+        &__column{
+            padding: 0;
+            &:first-child {
+                margin-left: 0;
+                order: 1;
+            }
+            &:last-child{
+                order: 3;
+            }
+        }
+        &__column_rev {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__title {
+            padding-bottom: 5px;
+            order: 2;
+        }
     }
 }
 
@@ -142,7 +202,15 @@
         }
     }
 }
-
+@media(max-width:875px) {
+    .files__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .icon {
+        height: 34px;
+    }
+}
 
 .popup__form {
     position: relative;
@@ -198,15 +266,9 @@
     text-align: left;
     padding-left: 18px;
 }
-.req {
-}
-.email {
-}
-.popup__button {
-}
-.pb {
 
-}
+
+
 .popup__btn {
     width: 350px;
     height: 71px;
@@ -235,5 +297,21 @@
     }
     &__doc{
         padding: 0 10px;
+    }
+}
+
+@media(max-width:875px) {
+    .input {
+        width: 100%;
+    }
+    .popup__input{
+        margin-bottom: 7px;
+    }
+    .popup__subtitle {
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
+    .popup__btn {
+        width: 100%;
     }
 }
